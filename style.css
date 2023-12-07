@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-bg: #63b68e;
+    --color-btn: #232126;
+    --color-white: #fff;
+    --color-boxes: #D6F8D6;
+    --color-xo: #b13732;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 3.2rem;
+    margin-top: 1.2rem;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    box-shadow: 5px 5px 1.5rem rgb(1 1 1 / 80%);
+}
+
+.box {
+    height: 20vmin;
+    width: 20vmin;
+    font-size: 10vmin;
+    color: var(--color-xo);
+    background-color: var(--color-boxes);
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.box-X {
+    color: purple;
+}
+
+.box:hover {
+    background-color: var(--color-white);
+}
+
+.btn {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--color-btn);
+    color: var(--color-white);
+    border-radius: 0.6rem;
+    border: none;
+    cursor: pointer;
+}
+
+#msg {
+    color: var(--color-white);
+    font-size: 8vmin;
+    font-weight: 700;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.758);
+}
+
+.msg-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    main h1 {
+        position: relative;
+        top: 2rem;
+        font-size: 3.5rem;
+    }
+
+    .game {
+        height: 75vmin;
+        width: 75vmin;
+    }
+
+    .box {
+        height: 25vmin;
+        width: 25vmin;
+        font-weight: 500;
+    }
+
+    #reset-btn {
+        position: relative;
+        bottom: 3.4rem;
+    }
+
+    .btn {
+        padding: 1.2rem;
+        font-size: 1.1rem;
+        border-radius: 7px;
+    }
+
+    .msg-container {
+        gap: 1.5rem;
+    }
+    
+}
